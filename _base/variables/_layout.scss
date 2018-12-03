@@ -1,0 +1,116 @@
+/*
+	Layout
+*/
+
+// basic spacing units
+$spacing-unit: rem(20px);
+$spacing-unit--x-small: rem(10px);
+$spacing-unit--small: rem(15px);
+$spacing-unit--medium: rem(30px);
+$spacing-unit--large: rem(40px);
+$spacing-unit--x-large: rem(60px);
+$rel-spacing-unit: 1em;
+$rel-spacing-unit--small: .5em;
+
+// page gutter
+$page-gutter: $spacing-unit;
+$page-gutter--tablet: $spacing-unit--medium;
+$page-gutter--desktop: $spacing-unit--large;
+
+// grid
+$grid-column-count: 24;
+$grid-column-gutter: $spacing-unit;
+$grid-column-gutter--tablet: $spacing-unit--medium;
+$grid-column-gutter--desktop: $spacing-unit--large;
+
+// media queries and breakpoints
+// build mobile first 300+
+$breakpoints--rem: $breakpoints;
+
+@each $name, $width in $breakpoints {
+	$breakpoints--rem: map-merge($breakpoints--rem, ($name: rem($width * 1px)));
+}
+
+@each $name, $width in $breakpoints {
+	$breakpoints: map-merge($breakpoints, ($name: em($width * 1px)));
+}
+
+// once dev mode is false, you must define any block grids, column grids and flush margins for each breakpoint
+// this is to keep unused code to a minimum
+$grid-bp: (
+	'base': (
+		'width': (),
+		'push': (),
+		'pull': (),
+		'block': (),
+		'flush': ()
+	),
+	'phone': (
+		'width': (),
+		'push': (),
+		'pull': (),
+		'block': (),
+		'flush': ()
+	),
+	'phone-wide': (
+		'width': (),
+		'push': (),
+		'pull': (),
+		'block': (),
+		'flush': ()
+	),
+	'phablet': (
+		'width': (),
+		'push': (),
+		'pull': (),
+		'block': (),
+		'flush': ()
+	),
+	'tablet-small': (
+		'width': (),
+		'push': (),
+		'pull': (),
+		'block': (),
+		'flush': ()
+	),
+	'tablet': (
+		'width': (),
+		'push': (),
+		'pull': (),
+		'block': (),
+		'flush': ()
+	),
+	'tablet-wide': (
+		'width': (),
+		'push': (),
+		'pull': (),
+		'block': (),
+		'flush': ()
+	),
+	'desktop': (
+		'width': (),
+		'push': (),
+		'pull': (),
+		'block': (),
+		'flush': ()
+	),
+	'desktop-wide': (
+		'width': (),
+		'push': (),
+		'pull': (),
+		'block': (),
+		'flush': ()
+	)
+);
+
+$max-width: breakpoint('desktop', true);
+
+// z-indexing
+// ordered from high to low
+// suggested naming convention would be the class/ID the z-index is going on
+$z-indexes: (
+	'outdated-browser',
+	'site-header',
+	'site-content',
+	'site-footer'
+);

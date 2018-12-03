@@ -1,0 +1,73 @@
+/*
+	Colours
+*/
+
+// brand colours
+$c--brand-primary: #ff585d;
+$c--brand-secondary: #fe0;
+
+// greyscale
+$c--black: #1a1a1a;
+$c--grey-dark: #444;
+$c--grey: #888;
+$c--grey-light: #ddd;
+$c--grey-x-light: #fafafa;
+$c--white: #fff;
+
+// other colours
+$c--red: #f50023;
+$c--green: #24b35d;
+$c--blue: #4D90FE;
+
+// social colours
+$c--twitter: #55acee;
+$c--facebook: #3b5998;
+$c--youtube: #bb0000;
+$c--pinterest: #cb2027;
+$c--linkedin: #007bb5;
+$c--instagram: #8a3ab9;
+
+// form & message positive/negative colours
+$c--positive: $c--green;
+$c--negative: $c--red;
+
+// top level element colours
+$c--body-bg: $c--white;
+$c--body-colour: $c--black;
+
+// colour map (only use colours from the styleguide)
+// used for when looping through panel/theme styles
+$colours: (
+	// primary colours
+	'yellow': (
+		'base': $c--brand-primary
+	),
+	'green': (
+		'base': $c--green
+	),
+	'red': (
+		'base': $c--red
+	),
+	'blue': (
+		'base': $c--blue
+	),
+	// greyscale
+	'black': (
+		'base': $c--black
+	),
+	'grey': (
+		'base': $c--grey
+	),
+	'grey-dark': (
+		'base': $c--grey-dark
+	),
+	'grey-light': (
+		'base': $c--grey-light
+	),
+	'grey-off-white': (
+		'base': $c--grey-x-light
+	),
+	'white': (
+		'base': $c--white
+	)
+);
